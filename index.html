@@ -2,10 +2,231 @@
 <html>
 <head>
     <title>Cat Arase - Mechanical Engineering Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        /* NAVIGATION */
+        nav {
+            background-color: #1a1a1a;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+        
+        nav a:first-child {
+            margin-left: 0;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        nav a:hover {
+            color: #0066cc;
+        }
+        
+        nav a.active {
+            color: #0066cc;
+            font-weight: bold;
+            border-bottom: 2px solid #0066cc;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #667eea;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: 0.5rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* MAIN CONTENT */
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        h1 {
+            color: #222;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            color: #0066cc;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #0066cc;
+            padding-bottom: 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #0066cc;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* FOOTER */
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
 </head>
 <body>
-    <h1>Cat Arase</h1>
-    <p>Mechanical Engineering Student at MIT</p>
-    <p>Portfolio coming soon...</p>
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html" class="active">Cat Arase</a>
+        <a href="about.html">About</a>
+        <a href="engineering-projects.html">Engineering</a>
+        <a href="personal-projects.html">Personal</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="resume.html">Resume</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h1>Cat Arase</h1>
+        <p>Mechanical Engineer | MIT Student</p>
+        <p>Materials Testing • Mechanical Design • Data Analysis</p>
+        <a href="about.html" class="cta-button">Learn More</a>
+        <a href="engineering-projects.html" class="cta-button">View Work</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <div class="highlight-card">
+            <h2>Welcome</h2>
+            <p>I'm a mechanical engineering student at MIT passionate about solving complex engineering challenges through rigorous analysis and creative design. This portfolio showcases my work in materials testing, mechanical design, and data-driven problem solving.</p>
+        </div>
+
+        <h2>Explore My Work</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🔧 Engineering Projects</h3>
+                <p>CAD designs, FEA simulations, and mechanical analysis</p>
+                <a href="engineering-projects.html" style="color: #0066cc; font-weight: bold; text-decoration: none;">View →</a>
+            </div>
+            
+            <div class="feature-card">
+                <h3>💡 Personal Projects</h3>
+                <p>Side projects and creative engineering solutions</p>
+                <a href="personal-projects.html" style="color: #0066cc; font-weight: bold; text-decoration: none;">View →</a>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📚 Research & Publications</h3>
+                <p>Academic research and technical papers</p>
+                <a href="research.html" style="color: #0066cc; font-weight: bold; text-decoration: none;">View →</a>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🎓 Teaching & Mentoring</h3>
+                <p>Educational initiatives and mentoring work</p>
+                <a href="teaching.html" style="color: #0066cc; font-weight: bold; text-decoration: none;">View →</a>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📄 Resume</h3>
+                <p>Complete CV and professional background</p>
+                <a href="resume.html" style="color: #0066cc; font-weight: bold; text-decoration: none;">View →</a>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📧 Contact</h3>
+                <p>Get in touch for collaborations</p>
+                <a href="mailto:carase@MIT.EDU" style="color: #0066cc; font-weight: bold; text-decoration: none;">Email →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Cat Arase. All rights reserved.</p>
+    </footer>
 </body>
 </html>
