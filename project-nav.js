@@ -23,36 +23,26 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Read selected category from URL
         const params = new URLSearchParams(window.location.search);
-        let selectedCategory = params.get("category");
+        let selectedCategory = params.get("category") || "all";
 
-        // If no category in URL, use the first category from the project
-        if (!selectedCategory) {
-            selectedCategory = Array.isArray(currentProject.category)
-                ? currentProject.category[0]
-                : currentProject.category;
+        // Filter projects
+        let navProjects = projects;
+        
+        if (selectedCategory !== "all") {
+            navProjects = projects.filter(p => {
+                const categories = Array.isArray(p.category) ? p.category : [p.category];
+                return categories.includes(selectedCategory);
+            });
         }
-
-        // Filter projects: keep only those that have the selected category
-        let navProjects = projects.filter(p => {
-            const categories = Array.isArray(p.category) ? p.category : [p.category];
-            return categories.includes(selectedCategory);
-        });
 
         // Find current project in filtered list
         let currentIndex = navProjects.findIndex(p => p.id === currentId);
 
-        // If current project not in filtered list, fall back to its first category
+        // If current project not in filtered list, fall back to all projects
         if (currentIndex === -1) {
-            const fallbackCategory = Array.isArray(currentProject.category)
-                ? currentProject.category[0]
-                : currentProject.category;
-
-            navProjects = projects.filter(p => {
-                const categories = Array.isArray(p.category) ? p.category : [p.category];
-                return categories.includes(fallbackCategory);
-            });
+            navProjects = projects;
             currentIndex = navProjects.findIndex(p => p.id === currentId);
-            selectedCategory = fallbackCategory;
+            selectedCategory = "all";
         }
 
         const prev = currentIndex > 0 ? navProjects[currentIndex - 1] : null;
@@ -60,12 +50,21 @@ document.addEventListener("DOMContentLoaded", async () => {
             ? navProjects[currentIndex + 1]
             : null;
 
-        const categoryQuery = `?category=${encodeURIComponent(selectedCategory)}`;
+        const categoryQuery = selectedCategory === "all" 
+            ? "" 
+            : `?category=${encodeURIComponent(selectedCategory)}`;
 
         if (categorySlot) {
+            const displayName = selectedCategory === "all" 
+                ? "All Projects" 
+                : selectedCategory;
+            const link = selectedCategory === "all" 
+                ? "/projects.html" 
+                : `/projects.html?category=${encodeURIComponent(selectedCategory)}`;
+            
             categorySlot.innerHTML = `
-                <a class="project-category-pill" href="/projects.html${categoryQuery}">
-                    ${selectedCategory}
+                <a class="project-category-pill" href="${link}">
+                    ${displayName}
                 </a>
             `;
         }
