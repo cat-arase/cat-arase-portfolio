@@ -3,7 +3,7 @@
     {
       "id": "egg-gripper",
       "title": "Compliant Egg Gripper",
-      "category": ["Engineering", "design"],
+      "category": ["engineering", "highlights"],
       "year": 2022,
       "thumbnail": "projects/egg-gripper/images/thumbnail.jpg",
       "tags": ["CAD Design", "Flexure", "Materials"],
@@ -13,7 +13,7 @@
     {
       "id": "laser-pumpkin",
       "title": "Laser Etched Pumpkin",
-      "category": ["Engineering", "art"],
+      "category": ["engineering", "fun"],
       "year": 2023,
       "thumbnail": "projects/laser-pumpkin/images/thumbnail.jpg",
       "tags": ["Laser Cutting", "Design"],
@@ -23,7 +23,7 @@
     {
       "id": "flexure-2dof",
       "title": "2 DOF Flexure",
-      "category": ["Engineering", "design"],
+      "category": ["engineering"],
       "year": 2023,
       "thumbnail": "projects/flexure-2dof/images/thumbnail.jpg",
       "tags": ["CAD", "FEA", "Mechanism Design"],
@@ -33,7 +33,7 @@
     {
       "id": "kayak-welding",
       "title": "Kayak Plastic Welding",
-      "category": ["Manufacturing", "research"],
+      "category": ["research"],
       "year": 2024,
       "thumbnail": "projects/kayak-welding/images/thumbnail.jpg",
       "tags": ["Welding", "Plastic", "Repair"],
