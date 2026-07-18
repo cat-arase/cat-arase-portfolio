@@ -1,1 +1,44 @@
-
+{
+  "projects": [
+    {
+      "id": "egg-gripper",
+      "title": "Compliant Egg Gripper",
+      "category": "engineering",
+      "year": 2022,
+      "thumbnail": "projects/egg-gripper/images/thumbnail.jpg",
+      "tags": ["CAD Design", "Flexure", "Materials"],
+      "briefDescription": "A group homework project for my flexure design class",
+      "highlight": true
+    },
+    {
+      "id": "laser-pumpkin",
+      "title": "Laser Etched Pumpkin",
+      "category": "engineering",
+      "year": 2023,
+      "thumbnail": "projects/laser-pumpkin/images/thumbnail.jpg",
+      "tags": ["Laser Cutting", "Design"],
+      "briefDescription": "Custom laser-etched design project",
+      "highlight": false
+    },
+    {
+      "id": "flexure-2dof",
+      "title": "2 DOF Flexure",
+      "category": "engineering",
+      "year": 2023,
+      "thumbnail": "projects/flexure-2dof/images/thumbnail.jpg",
+      "tags": ["CAD", "FEA", "Mechanism Design"],
+      "briefDescription": "Two degree of freedom flexure mechanism",
+      "highlight": false
+    },
+    {
+      "id": "kayak-welding",
+      "title": "Kayak Plastic Welding",
+      "category": "manufacturing",
+      "year": 2024,
+      "thumbnail": "projects/kayak-welding/images/thumbnail.jpg",
+      "tags": ["Welding", "Plastic", "Repair"],
+      "briefDescription": "Research on plastic welding techniques",
+      "highlight": false
+    }
+  ]
+}
