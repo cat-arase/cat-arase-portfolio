@@ -27,8 +27,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Filter projects
         let navProjects = projects;
-        
-        if (selectedCategory !== "all") {
+
+        if (selectedCategory === "highlights") {
+            navProjects = projects.filter(p => p.highlight);
+        } else if (selectedCategory !== "all") {
             navProjects = projects.filter(p => {
                 const categories = Array.isArray(p.category) ? p.category : [p.category];
                 return categories.includes(selectedCategory);
@@ -55,9 +57,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             : `?category=${encodeURIComponent(selectedCategory)}`;
 
         if (categorySlot) {
-            const displayName = selectedCategory === "all" 
+            let displayName = selectedCategory === "all" 
                 ? "All Projects" 
-                : selectedCategory;
+                : selectedCategory === "highlights"
+                    ? "Highlights"
+                    : selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1);
+            
             const link = selectedCategory === "all" 
                 ? "/projects.html" 
                 : `/projects.html?category=${encodeURIComponent(selectedCategory)}`;
