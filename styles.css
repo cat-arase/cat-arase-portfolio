@@ -264,10 +264,13 @@ li {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin: 2rem 0;
+    width: 100%;
 }
 
 .image-grid-item {
     text-align: center;
+    width: 100%;
+    min-width: 0;
 }
 
 .image-caption {
