@@ -266,8 +266,15 @@ footer p {
 .project-thumbnail-title {
     font-size: 1.1rem;
     font-weight: bold;
-    color
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
 
+.project-thumbnail-description {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.5;
+}
 
 .project-top-meta {
     display: flex;
@@ -301,18 +308,20 @@ footer p {
 .project-title-row h2 {
     margin: 0;
     text-align: center;
+    border: none;
+    padding: 0;
 }
 
 .project-nav-slot {
-    min-height: 1px;
+    display: flex;
 }
 
-.project-prev {
-    justify-self: start;
+.project-nav-slot:first-child {
+    justify-content: flex-start;
 }
 
-.project-next {
-    justify-self: end;
+.project-nav-slot:last-child {
+    justify-content: flex-end;
 }
 
 .project-nav-link {
@@ -334,16 +343,10 @@ footer p {
         text-align: center;
     }
 
-    .project-prev,
-    .project-next {
-        justify-self: center;
+    .project-nav-slot {
+        justify-content: center;
     }
 
-    .project-title-row h2 {
-        order: -1;
-        margin-bottom: 0.5rem;
-    }
-}
     .project-title-row h2 {
         order: -1;
         margin-bottom: 0.5rem;
