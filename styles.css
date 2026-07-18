@@ -263,16 +263,6 @@ ul {
     text-align: center;
 }
 
-.image-grid-item img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    background-color: #e0e0e0;
-    border-radius: 0px;
-    display: block;
-    margin: 0 auto;
-}
-
 .image-caption {
     font-size: 0.95rem;
     color: #666666;
@@ -280,20 +270,4 @@ ul {
     margin-top: 0.75rem;
     padding: 0 0.5rem;
     line-height: 1.6;
-}
-
-/* Single full-width image */
-.project-image-full {
-    margin: 2rem 0;
-    text-align: center;
-}
-
-.project-image-full img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    background-color: #e0e0e0;
-    border-radius: 0px;
-    display: block;
-    margin: 0 auto;
 }
