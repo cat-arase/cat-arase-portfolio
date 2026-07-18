@@ -8,9 +8,6 @@
     <!-- LOAD HEADER -->
     <div id="header"></div>
 
-    <!-- LOAD HEADER -->
-    <div id="header"></div>
-
     <script>
         fetch('header.html')
             .then(response => response.text())
@@ -41,7 +38,7 @@
         </div>
     </div>
 
-   <!-- LOAD FOOTER -->
+    <!-- LOAD FOOTER -->
     <div id="footer"></div>
 
     <script>
@@ -50,16 +47,33 @@
             .then(data => document.getElementById('footer').innerHTML = data);
     </script>
 
-
     <script>
         let allProjects = [];
         let currentFilter = 'all';
+
+        // Read category from URL parameter on page load
+        const params = new URLSearchParams(window.location.search);
+        const urlCategory = params.get('category');
 
         // Load projects data
         fetch('projects-data.json')
             .then(response => response.json())
             .then(data => {
                 allProjects = data.projects;
+                
+                // If URL has a category parameter, set it as the current filter
+                if (urlCategory) {
+                    currentFilter = urlCategory;
+                    
+                    // Activate the corresponding button
+                    document.querySelectorAll('.filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                        if (btn.dataset.filter === urlCategory) {
+                            btn.classList.add('active');
+                        }
+                    });
+                }
+                
                 renderProjects();
             })
             .catch(error => console.error('Error loading projects:', error));
@@ -71,6 +85,12 @@
                 this.classList.add('active');
                 currentFilter = this.dataset.filter;
                 renderProjects();
+                
+                // Update URL without reloading the page
+                const newUrl = currentFilter === 'all' 
+                    ? 'projects.html' 
+                    : `projects.html?category=${currentFilter}`;
+                window.history.pushState({}, '', newUrl);
             });
         });
 
@@ -83,7 +103,10 @@
             if (currentFilter === 'highlights') {
                 filteredProjects = allProjects.filter(p => p.highlight);
             } else if (currentFilter !== 'all') {
-                filteredProjects = allProjects.filter(p => p.category === currentFilter);
+                filteredProjects = allProjects.filter(p => {
+                    const categories = Array.isArray(p.category) ? p.category : [p.category];
+                    return categories.includes(currentFilter);
+                });
             }
 
             if (filteredProjects.length === 0) {
@@ -95,18 +118,22 @@
             grid.style.display = 'grid';
             noProjects.style.display = 'none';
 
-            grid.innerHTML = filteredProjects.map(project => `
-                <a href="projects/${project.id}/${project.id}.html" class="project-thumbnail">
-                    <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail-image">
-                    <div class="project-thumbnail-info">
-                        <div class="project-thumbnail-title">${project.title}</div>
-                        <div class="project-thumbnail-year">${project.year}</div>
-                        <div class="project-thumbnail-tags">
-                            ${project.tags.map(tag => `<span class="project-thumbnail-tag">${tag}</span>`).join('')}
+            // Build project links with category parameter
+            grid.innerHTML = filteredProjects.map(project => {
+                const categoryParam = currentFilter === 'all' ? '' : `?category=${currentFilter}`;
+                return `
+                    <a href="projects/${project.id}/${project.id}.html${categoryParam}" class="project-thumbnail">
+                        <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail-image">
+                        <div class="project-thumbnail-info">
+                            <div class="project-thumbnail-title">${project.title}</div>
+                            <div class="project-thumbnail-year">${project.year}</div>
+                            <div class="project-thumbnail-tags">
+                                ${project.tags.map(tag => `<span class="project-thumbnail-tag">${tag}</span>`).join('')}
+                            </div>
                         </div>
-                    </div>
-                </a>
-            `).join('');
+                    </a>
+                `;
+            }).join('');
         }
     </script>
 </body>
