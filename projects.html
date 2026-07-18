@@ -9,18 +9,13 @@
     <!-- LOAD HEADER -->
     <div id="header"></div>
 
+    <!-- LOAD HEADER -->
+    <div id="header"></div>
+
     <script>
         fetch('header.html')
             .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                // Update active link to projects
-                document.querySelectorAll('nav a').forEach(link => {
-                    link.classList.remove('active');
-                });
-                const projectsLink = Array.from(document.querySelectorAll('nav a')).find(a => a.textContent === 'All Projects');
-                if (projectsLink) projectsLink.classList.add('active');
-            });
+            .then(data => document.getElementById('header').innerHTML = data);
     </script>
 
     <!-- MAIN CONTENT -->
