@@ -95,44 +95,44 @@
         });
 
         function renderProjects() {
-    const grid = document.getElementById('projectsGrid');
-    const noProjects = document.getElementById('noProjects');
-    
-    let filteredProjects = allProjects;
+            const grid = document.getElementById('projectsGrid');
+            const noProjects = document.getElementById('noProjects');
+            
+            let filteredProjects = allProjects;
 
-    if (currentFilter !== 'all') {
-        filteredProjects = allProjects.filter(p => {
-            const categories = Array.isArray(p.category) ? p.category : [p.category];
-            return categories.includes(currentFilter);
-        });
-    }
+            if (currentFilter !== 'all') {
+                filteredProjects = allProjects.filter(p => {
+                    const categories = Array.isArray(p.category) ? p.category : [p.category];
+                    return categories.includes(currentFilter);
+                });
+            }
 
-    if (filteredProjects.length === 0) {
-        grid.style.display = 'none';
-        noProjects.style.display = 'block';
-        return;
-    }
+            if (filteredProjects.length === 0) {
+                grid.style.display = 'none';
+                noProjects.style.display = 'block';
+                return;
+            }
 
-    grid.style.display = 'grid';
-    noProjects.style.display = 'none';
+            grid.style.display = 'grid';
+            noProjects.style.display = 'none';
 
-    // Build project links with category parameter
-    grid.innerHTML = filteredProjects.map(project => {
-        const categoryParam = currentFilter === 'all' ? '' : `?category=${currentFilter}`;
-        return `
-            <a href="projects/${project.id}/${project.id}.html${categoryParam}" class="project-thumbnail">
-                <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail-image">
-                <div class="project-thumbnail-info">
-                    <div class="project-thumbnail-title">${project.title}</div>
-                    <div class="project-thumbnail-year">${project.year}</div>
-                    <div class="project-thumbnail-tags">
-                        ${project.tags.map(tag => `<span class="project-thumbnail-tag">${tag}</span>`).join('')}
-                    </div>
-                </div>
-            </a>
-        `;
-    }).join('');
-}
+            // Build project links with category parameter
+            grid.innerHTML = filteredProjects.map(project => {
+                const categoryParam = currentFilter === 'all' ? '' : `?category=${currentFilter}`;
+                return `
+                    <a href="projects/${project.id}/${project.id}.html${categoryParam}" class="project-thumbnail">
+                        <img src="${project.thumbnail}" alt="${project.title}" class="project-thumbnail-image">
+                        <div class="project-thumbnail-info">
+                            <div class="project-thumbnail-title">${project.title}</div>
+                            <div class="project-thumbnail-year">${project.year}</div>
+                            <div class="project-thumbnail-tags">
+                                ${project.tags.map(tag => `<span class="project-thumbnail-tag">${tag}</span>`).join('')}
+                            </div>
+                        </div>
+                    </a>
+                `;
+            }).join('');
+        }
     </script>
 </body>
 </html>
