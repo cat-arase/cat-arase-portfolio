@@ -107,9 +107,13 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Cat Arase. All rights reserved.</p>
-    </footer>
+    <!-- LOAD FOOTER -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 </body>
 </html>
