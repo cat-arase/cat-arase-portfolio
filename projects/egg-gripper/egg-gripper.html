@@ -4,6 +4,7 @@
     <title>Compliant Egg Gripper - Cat Arase Portfolio</title>
     <link rel="stylesheet" href="../../styles.css">
     <style>
+        /* PROJECT-SPECIFIC STYLES */
         .project-header {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -16,7 +17,6 @@
             width: 100%;
             height: auto;
             background-color: #e0e0e0;
-            border-radius: 0px;
         }
 
         .project-info h3 {
@@ -43,6 +43,37 @@
 
         .back-link:hover {
             opacity: 0.6;
+        }
+
+        /* IMAGE GRID */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .image-grid-item {
+            text-align: center;
+        }
+
+        .image-grid-item img,
+        .image-grid-item video {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            background-color: #e0e0e0;
+        }
+
+        .image-caption {
+            font-size: 0.95rem;
+            color: #666666;
+            font-style: italic;
+            margin-top: 0.75rem;
+            padding: 0 0.5rem;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -90,31 +121,30 @@
             </div>
         </div>
 
-<!-- PROJECT GALLERY GRID -->
+        <!-- PROJECT GALLERY GRID -->
         <h3 style="margin-top: 3rem; margin-bottom: 1.5rem;">Project Images</h3>
         
         <div class="image-grid">
             <div class="image-grid-item">
-                <img src="images/prototypeV1.jpg" alt="Prototype Version 1" style="width: 100%; height: auto; display: block;">
+                <img src="images/prototypeV1.jpg" alt="Prototype Version 1">
                 <div class="image-caption">First prototype iteration - initial flexure mechanism design</div>
             </div>
 
             <div class="image-grid-item">
-                <img src="images/prototypeV2.jpg" alt="Prototype Version 2" style="width: 100%; height: auto; display: block;">
+                <img src="images/prototypeV2.jpg" alt="Prototype Version 2">
                 <div class="image-caption">Second prototype with refined gripper motion and compliance adjustments</div>
             </div>
 
             <div class="image-grid-item">
-                <video width="100%" controls style="background-color: #e0e0e0; display: block;">
+                <video controls>
                     <source src="images/video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <div class="image-caption">Gripper in action - successfully gripping an egg</div>
             </div>
         </div>
-        </div>
 
-    </div>  <!-- CLOSE container div -->
+    </div>
 
     <!-- LOAD FOOTER -->
     <div id="footer"></div>
