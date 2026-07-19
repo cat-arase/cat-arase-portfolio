@@ -127,7 +127,7 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    align-items: start;
+    align-items: stretch;
     margin-bottom: 3rem;
 }
 
@@ -137,6 +137,9 @@ li {
     border-radius: 0px;
     box-shadow: none;
     border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-image {
