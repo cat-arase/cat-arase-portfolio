@@ -1,1 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clock - Cat Arase Portfolio</title>
 
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .project-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+            margin: 2rem 0;
+        }
+
+        .project-header > div:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .project-header-image {
+            width: 100%;
+            height: auto;
+            background-color: #e0e0e0;
+        }
+
+        .project-info h3 {
+            color: #1a1a1a;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .project-info p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #000000;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #000000;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            opacity: 0.6;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .image-grid-item {
+            text-align: center;
+        }
+
+        .image-grid-item img,
+        .image-grid-item video {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            background-color: #e0e0e0;
+        }
+
+        .image-caption {
+            font-size: 0.95rem;
+            color: #666666;
+            font-style: italic;
+            margin-top: 0.75rem;
+            padding: 0 0.5rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body data-project="waterjet-training">
+    <!-- LOAD HEADER -->
+    <div id="header"></div>
+
+    <script>
+        fetch('../../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">        
+        <div class="project-title-row">
+            <div id="project-prev" class="project-nav-slot"></div>
+            <div id="project-category"></div>
+            <div id="project-next" class="project-nav-slot"></div>
+        </div>
+        
+        <h2>Waterjet Weekly Training (2020, 2021)</h2>
+        <div id="project-tags" class="project-tags-container"></div>
+
+        <div class="project-header">
+            <div>
+                <img src="/projects/waterjet-training/thumbnail.jpg" alt="Keychain" class="project-header-image">
+                <div class="image-caption"></div>
+            </div>
+
+            <div class="project-info">
+                
+                <h3>Description</h3>
+                <p>I volunteer in a maker space on campus where I spend time running open hours. In 2020 & 2021, the welding shop was closed, so I was assigned to waterjet training where I helped students design make keychains using the OMAX software. </p>
+        </div>
+
+        <script>
+            fetch('/projects-data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const projects = data.projects || data;
+                    const currentProject = projects.find(p => p.id === 'waterjet-training');
+                    
+                    if (currentProject && currentProject.tags) {
+                        const tagsDiv = document.getElementById('project-tags');
+                        tagsDiv.innerHTML = currentProject.tags.map(tag => {
+                            const tagClass = 'tag-' + tag.toLowerCase().replace(/\s+/g, '-');
+                            return `<span class="project-thumbnail-tag ${tagClass}">${tag}</span>`;
+                        }).join('');
+                    }
+                });
+        </script>
+    </div>
+
+    <div id="project-nav"></div>
+    <script src="/project-nav.js"></script>
+    
+    <!-- LOAD FOOTER -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('../../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
