@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Compliant Egg Gripper - Cat Arase Portfolio</title>
-    
+    <div id="project-tags" class="project-tags-container"></div>
+
     <link rel="stylesheet" href="../../styles.css">
     <style>
         .project-header {
@@ -156,6 +157,22 @@
                 <div class="image-caption">Gripper in action - successfully gripping an egg</div>
             </div>
         </div>
+        <script>
+            fetch('/projects-data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const projects = data.projects || data;
+                    const currentProject = projects.find(p => p.id === 'egg-gripper');
+                    
+                    if (currentProject && currentProject.tags) {
+                        const tagsDiv = document.getElementById('project-tags');
+                        tagsDiv.innerHTML = currentProject.tags.map(tag => {
+                            const tagClass = 'tag-' + tag.toLowerCase().replace(/\s+/g, '-');
+                            return `<span class="project-thumbnail-tag ${tagClass}">${tag}</span>`;
+                        }).join('');
+                    }
+                });
+        </script>
     </div>
 
 
