@@ -1,6 +1,33 @@
 {
   "projects": [
     {
+      "id": "curved-scisor",
+      "title": "Curved Scissor Lift",
+      "category": ["engineering", "highlights"],
+      "year": 2024,
+      "thumbnail": "projects/curved-scisor/images/thumbnail.jpg",
+      "tags": ["Design", "Engineering", "Machining", "Machine Design"],
+      "briefDescription": "Curved scissor mechanism for Alex Slocum's class"
+    },
+    {
+      "id": "metal-glass-lamps",
+      "title": "Metal & Glass Lamps",
+      "category": ["fun", "classes"],
+      "year": 2024,
+      "thumbnail": "projects/metal-glass-lamps/images/thumbnail.jpg",
+      "tags": ["Design", "Welding", "CNC Plasma", "Teaching"],
+      "briefDescription": "Lamps made by me and students"
+    },
+    {
+      "id": "lathe",
+      "title": "Lathe",
+      "category": ["engineering"],
+      "year": 2023,
+      "thumbnail": "projects/lathe/images/thumbnail.jpg",
+      "tags": ["Design", "Precision ", "Machining", "CAD"],
+      "briefDescription": "Lathe from 2.72"
+    },
+    {
       "id": "egg-gripper",
       "title": "Compliant Egg Gripper",
       "category": ["engineering", "highlights"],
