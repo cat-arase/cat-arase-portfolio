@@ -372,3 +372,60 @@ footer p {
         margin-bottom: 0.5rem;
     }
 }
+
+/* COLOR-CODED TAGS */
+.project-thumbnail-tag {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0.25rem;
+    color: #ffffff;
+}
+
+.tag-design {
+    background-color: #FF6B6B;
+}
+
+.tag-cad-design {
+    background-color: #FF6B6B;
+}
+
+.tag-flexure {
+    background-color: #4ECDC4;
+}
+
+.tag-materials {
+    background-color: #95E1D3;
+}
+
+.tag-laser-cutting {
+    background-color: #FFE66D;
+    color: #1a1a1a;
+}
+
+.tag-cad {
+    background-color: #FF6B6B;
+}
+
+.tag-fea {
+    background-color: #4ECDC4;
+}
+
+.tag-mechanism-design {
+    background-color: #FF6B6B;
+}
+
+.tag-welding {
+    background-color: #95B8D1;
+}
+
+.tag-plastic {
+    background-color: #B8E6D5;
+}
+
+.tag-repair {
+    background-color: #FFD93D;
+    color: #1a1a1a;
+}
