@@ -1,1 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pencil Holder - Cat Arase Portfolio</title>
 
+    <link rel="stylesheet" href="../../styles.css">
+    <style>
+        .project-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+            margin: 2rem 0;
+        }
+
+        .project-header > div:first-child {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .project-header-image {
+            width: 100%;
+            height: auto;
+            background-color: #e0e0e0;
+        }
+
+        .project-info h3 {
+            color: #1a1a1a;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .project-info p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #000000;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #000000;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            opacity: 0.6;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .image-grid-item {
+            text-align: center;
+        }
+
+        .image-grid-item img,
+        .image-grid-item video {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            background-color: #e0e0e0;
+        }
+
+        .image-caption {
+            font-size: 0.95rem;
+            color: #666666;
+            font-style: italic;
+            margin-top: 0.75rem;
+            padding: 0 0.5rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body data-project="pencil-holder">
+    <!-- LOAD HEADER -->
+    <div id="header"></div>
+
+    <script>
+        fetch('../../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">        
+        <div class="project-title-row">
+            <div id="project-prev" class="project-nav-slot"></div>
+            <div id="project-category"></div>
+            <div id="project-next" class="project-nav-slot"></div>
+        </div>
+        
+        <h2>3D Printers & Early Design (2012-2018)</h2>
+        <div id="project-tags" class="project-tags-container"></div>
+
+
+        <div class="project-header">
+            <div>
+                <img src="thumbnail.jpg" alt="Pencil holder" class="project-header-image">
+                <div class="image-caption">Jibbitz made for crocs</div>
+            </div>
+
+            <div class="project-info">
+                <h3>Key Achievements</h3>
+                <ul>
+                    <li>Learned laser engraver</li>
+                    <li>Bandaw, sander, drillpress safety</li>
+                    <li>Combining multiple processes</li>
+                </ul>
+                
+                <h3>Description</h3>
+                <p>In order to gain shop access my freshman year, I had to go through the Makerlodge program. A part of this program was building a pencil holder. This pencil holder was cut on a bandsaw. The holes are done with a drill press. The holder was then sanded. The red gear was laser cut and the black gear was 3D printed.</p>
+                <h3>Lessons Learned</h3>
+                <p>The Makerlodge used the laser engraver to mark the spots of the holes for the gears. I had never seen this done before, but thought it was brilliant to make sure the holes were in the correct spots.</p>
+            </div>
+        </div>
+        
+
+
+        </div>
+        <script>
+            fetch('/projects-data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const projects = data.projects || data;
+                    const currentProject = projects.find(p => p.id === 'pencil-holder');
+                    
+                    if (currentProject && currentProject.tags) {
+                        const tagsDiv = document.getElementById('project-tags');
+                        tagsDiv.innerHTML = currentProject.tags.map(tag => {
+                            const tagClass = 'tag-' + tag.toLowerCase().replace(/\s+/g, '-');
+                            return `<span class="project-thumbnail-tag ${tagClass}">${tag}</span>`;
+                        }).join('');
+                    }
+                });
+        </script>
+    </div>
+
+
+    <div id="project-nav"></div>
+    <script src="/project-nav.js"></script>
+    
+    <!-- LOAD FOOTER -->
+    <div id="footer"></div>
+
+    <script>
+        fetch('../../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
