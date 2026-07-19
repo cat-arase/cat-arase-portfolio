@@ -224,6 +224,29 @@ footer p {
     padding: 0;
 }
 
+/* RESUME PAGE */
+.resume-container {
+    margin: 2rem 0;
+}
+
+.resume-download-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #1a1a1a;
+    border-radius: 0px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.resume-download-btn:hover {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
 /* PROJECTS PAGE */
 .filter-buttons {
     display: flex;
