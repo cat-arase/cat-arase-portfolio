@@ -177,8 +177,116 @@
       "category": ["fun"],
       "year": 2022,
       "thumbnail": "projects/kayak-welding/images/thumbnail.jpg",
-      "tags": ["Welding", "Plastic", "Repair"],
+      "tags": ["Plastic", "Repair", "Boats"],
       "briefDescription": "Research on plastic welding techniques"
+    },
+    {
+      "id": "windlass",
+      "title": "Windlass Casting",
+      "category": ["highlights", "engineering"],
+      "year": 2022,
+      "thumbnail": "projects/windlass/images/thumbnail.jpg",
+      "tags": ["Casting", "Machining", "CAM"],
+      "briefDescription": "Brass metal casting"
+    },
+    {
+      "id": "dragonfly",
+      "title": "Micro Dragonfly",
+      "category": ["research", "highlights", "engineering"],
+      "year": 2022,
+      "thumbnail": "projects/dragonfly/images/thumbnail.jpg",
+      "tags": ["Micro fab", "Laser", "DEA"],
+      "briefDescription": "Senior thesis"
+    },
+    {
+      "id": "stirling-engine",
+      "title": "Stirling Engine",
+      "category": ["highlights", "engineering", "fun"],
+      "year": 2022,
+      "thumbnail": "projects/stirling-engine/images/thumbnail.jpg",
+      "tags": ["Machining", "CAM", "Art"],
+      "briefDescription": "Papalardo apprenticship"
+    },
+    {
+      "id": "cowyak",
+      "title": "Cowyak",
+      "category": ["fun"],
+      "year": 2022,
+      "thumbnail": "projects/cowyak/images/thumbnail.jpg",
+      "tags": ["Limited planning", "Boats"],
+      "briefDescription": "Fun with friends"
+    },
+    {
+      "id": "yoyo",
+      "title": "Injection Molded Yoyos",
+      "category": ["engineering" ,"fun"],
+      "year": 2022,
+      "thumbnail": "projects/yoyo/images/thumbnail.jpg",
+      "tags": ["Injection Molding", "CAD", "CAM", "Machining", "Manufacturing"],
+      "briefDescription": "Life-theme injection molded yo-yo"
+    },
+     {
+      "id": "softball-field-gift",
+      "title": "Router and Laser Work",
+      "category": ["fun"],
+      "year": 2022,
+      "thumbnail": "projects/softball-field-gift/images/thumbnail.jpg",
+      "tags": ["CAD", "CAM", "Router", "Laser", "Gift"],
+      "briefDescription": "Softball senior gift"
+    },
+    {
+      "id": "waterjet-coaster",
+      "title": "Waterjet Coasters",
+      "category": ["fun"],
+      "year": 2022,
+      "thumbnail": "projects/waterjet-coaster/images/thumbnail.jpg",
+      "tags": ["Waterjet", "Gift"],
+      "briefDescription": "Gift for dad"
+    },
+    {
+      "id": "glasses-laser",
+      "title": "Glass Laser Etching ",
+      "category": ["fun"],
+      "year": 2022,
+      "thumbnail": "projects/glasses-laser/images/thumbnail.jpg",
+      "tags": ["Laser", "Gift"],
+      "briefDescription": "Gifts"
+    },
+    {
+      "id": "cnc-embroideryMachine Embroidery",
+      "title": "Machine Embroidery",
+      "category": ["fun"],
+      "year": 2022,
+      "thumbnail": "projects/cnc-embroidery/images/thumbnail.jpg",
+      "tags": ["stitching"],
+      "briefDescription": "Embroidery projects"
+    },
+    {
+      "id": "hammering-robot",
+      "title": "Hammering Robot",
+      "category": ["engineering"],
+      "year": 2021,
+      "thumbnail": "projects/hammering-robot/images/thumbnail.jpg",
+      "tags": ["Robot", "3D Printing", "Illustrator"],
+      "briefDescription": "Class project with some chaos"
+    },
+    {
+      "id": "seahawks-light",
+      "title": "Seahawks Light",
+      "category": ["fun"],
+      "year": 2021,
+      "thumbnail": "projects/seahawks-light/images/thumbnail.jpg",
+      "tags": ["Limited tools", "PCB", "COVID Era"],
+      "briefDescription": "COVID era limited tool project"
+    },
+    {
+      "id": "vinyl-stickers",
+      "title": "Vinyl Stickers",
+      "category": ["fun"],
+      "year": 2021,
+      "thumbnail": "projects/vinyl-stickers/images/thumbnail.jpg",
+      "tags": ["Vinyl", "Stickers"],
+      "briefDescription": "Vinyl stickers"
     }
   ]
 }
