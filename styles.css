@@ -83,7 +83,7 @@ nav a.active {
 .container {
     flex: 1;
     max-width: 1000px;
-    margin: 0.5rem auto;
+    margin: 2rem auto;
     padding: 0 2rem;
     width: 100%;
     box-sizing: border-box;
