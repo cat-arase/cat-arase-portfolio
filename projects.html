@@ -140,7 +140,10 @@
                     <div class="project-thumbnail-info">
                         <div class="project-thumbnail-title">${project.title}</div>
                         <div class="project-thumbnail-tags">
-                            ${project.tags.map(tag => `<span class="project-thumbnail-tag">${tag}</span>`).join('')}
+                            ${project.tags.map(tag => {
+                                const tagClass = 'tag-' + tag.toLowerCase().replace(/\s+/g, '-');
+                                return `<span class="project-thumbnail-tag ${tagClass}">${tag}</span>`;
+                            }).join('')}
                         </div>
                     </div>
                 </a>
