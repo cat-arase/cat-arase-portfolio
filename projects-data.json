@@ -287,6 +287,115 @@
       "thumbnail": "projects/vinyl-stickers/images/thumbnail.jpg",
       "tags": ["Vinyl", "Stickers"],
       "briefDescription": "Vinyl stickers"
+    },
+    {
+      "id": "vulcan",
+      "title": "Vulcan, a wire to wire soldering device",
+      "category": ["engineering"],
+      "year": 2021,
+      "thumbnail": "projects/vinyl-stickers/images/thumbnail.jpg",
+      "tags": ["Product Design", "Project Managment", "Team Project", "PCB"],
+      "briefDescription": "2.009"
+    },
+    {
+      "id": "giant-duck",
+      "title": "Giant Duck",
+      "category": ["fun"],
+      "year": 2021,
+      "thumbnail": "projects/giant-duck/images/thumbnail.jpg",
+      "tags": ["Team Project", "Woodworking", "Project managment"],
+      "briefDescription": "Simmons water wars build"
+    },
+    {
+      "id": "navigation-circuit-board",
+      "title": "Navigation Circuit Board ",
+      "category": ["engineering"],
+      "year": 2021,
+      "thumbnail": "projects/navigation-circuit-board/images/thumbnail.jpg",
+      "tags": ["PCB", "PCB Layout", "Electronics", "Class project", "COVID Era"],
+      "briefDescription": "Circuit board to learn how to make them"
+    },
+    {
+      "id": "april-tags",
+      "title": "April Tags and Object Tracking",
+      "category": ["engineering"],
+      "year": 2021,
+      "thumbnail": "projects/april-tags/images/thumbnail.jpg",
+      "tags": ["Software", "Class project", "COVID Era"],
+      "briefDescription": "Become a duck"
+    },
+    {
+      "id": "go-forth",
+      "title": "Spring Constants of Pullback Toy Cars",
+      "category": ["engineering"],
+      "year": 2020,
+      "thumbnail": "projects/go-forth/images/thumbnail.jpg",
+      "tags": ["Measurment", "Data analysis"],
+      "briefDescription": "Learn about differences in toy cars"
+    },
+    {
+      "id": "electrocatalytic-cell",
+      "title": "Electrocatalytic Cell Design",
+      "category": ["engineering", "research"],
+      "year": 2020,
+      "thumbnail": "projects/electrocatalytic-cell/images/thumbnail.jpg",
+      "tags": ["Design", "CAD"],
+      "briefDescription": "Design a research tool"
+    },
+    {
+      "id": "wheel-spinning-robot",
+      "title": "Wheel Spinning Robot",
+      "category": ["engineering"],
+      "year": 2020,
+      "thumbnail": "projects/wheel-spinning-robot/images/thumbnail.jpg",
+      "tags": ["Robot", "Design", "CAD", "Class Project"],
+      "briefDescription": "2.007 project"
+    },
+    {
+      "id": "blacksmithing",
+      "title": "Blacksmithing",
+      "category": ["fun"],
+      "year": 2020,
+      "thumbnail": "projects/blacksmithing/images/thumbnail.jpg",
+      "tags": ["Fire", "Forge"],
+      "briefDescription": "Learn to blacksmith"
+    },
+    {
+      "id": "clock",
+      "title": "Clock",
+      "category": ["fun"],
+      "year": 2019,
+      "thumbnail": "projects/clock/images/thumbnail.jpg",
+      "tags": ["Laser","Gift"],
+      "briefDescription": "Laser cut a fancy clock"
+    },
+    {
+      "id": "flashlight",
+      "title": "Flashlight",
+      "category": ["engineering"],
+      "year": 2019,
+      "thumbnail": "projects/flashlight/images/thumbnail.jpg",
+      "tags": ["Machining"],
+      "briefDescription": "Simple, first machining project"
+    },
+    {
+      "id": "pencil-holder",
+      "title": "Pencil Holder",
+      "category": ["fun"],
+      "year": 2018,
+      "thumbnail": "projects/pencil-holder/images/thumbnail.jpg",
+      "tags": ["Laser","Woodworking","3D printing"],
+      "briefDescription": "Learn to use all the shop tools"
+    },
+    {
+      "id": "3D-printers-and-early",
+      "title": "3D Printers & Early Design",
+      "category": ["fun"],
+      "year": 2018,
+      "thumbnail": "projects/3D-printers-and-early/images/thumbnail.jpg",
+      "tags": ["Design","3D printing"],
+      "briefDescription": "Where I started"
     }
+    
   ]
 }
