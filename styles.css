@@ -421,57 +421,160 @@ footer p {
 
 .project-thumbnail-tag {
     display: inline-block;
-    padding: 0.2rem 0.4rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 3px;
     font-size: 0.75rem;
-    font-weight: 500;
-    margin: 0.15rem;
+    font-weight: 600;
+    margin: 0.2rem;
     color: #ffffff;
 }
 
+/* Fabrication & Manufacturing Skills */
+.tag-laser-cutting {
+    background-color: #FFD700;
+    color: #1a1a1a;
+}
+
+.tag-cnc-routing {
+    background-color: #FF8C00;
+}
+
+.tag-waterjet-cutting {
+    background-color: #00CED1;
+}
+
+.tag-machining {
+    background-color: #696969;
+}
+
+.tag-mig-welding {
+    background-color: #DC143C;
+}
+
+.tag-3d-printing {
+    background-color: #7209B7;
+}
+
+.tag-injection-molding {
+    background-color: #B5179E;
+}
+
+.tag-soldering {
+    background-color: #FF1493;
+}
+
+.tag-blacksmithing {
+    background-color: #2C3E50;
+}
+
+.tag-woodworking {
+    background-color: #8B4513;
+}
+
+.tag-glass-torchwork {
+    background-color: #FF69B4;
+}
+
+.tag-casting {
+    background-color: #A0522D;
+}
+
+.tag-cnc-plasma {
+    background-color: #4169E1;
+}
+
+/* Design & Engineering Skills */
+.tag-cad {
+    background-color: #FF6B6B;
+}
+
+.tag-cam {
+    background-color: #FF8C42;
+}
+
+.tag-mechanical-design {
+    background-color: #E63946;
+}
+
+.tag-flexure-design {
+    background-color: #4ECDC4;
+}
+
+.tag-pcb-design {
+    background-color: #BC6C25;
+}
+
+.tag-product-design {
+    background-color: #F72585;
+}
+
+.tag-illustration {
+    background-color: #D62828;
+}
 
 .tag-design {
     background-color: #FF6B6B;
 }
 
-.tag-cad-design {
-    background-color: #FF6B6B;
+/* Technical Skills */
+.tag-electronics {
+    background-color: #6A4C93;
 }
 
-.tag-flexure {
-    background-color: #4ECDC4;
+.tag-pneumatics {
+    background-color: #4361EE;
 }
 
-.tag-materials {
+.tag-software {
+    background-color: #3A86FF;
+}
+
+.tag-data-analysis {
+    background-color: #06A77D;
+}
+
+/* Material Knowledge */
+.tag-metals {
+    background-color: #808080;
+}
+
+.tag-plastics {
     background-color: #95E1D3;
 }
 
-.tag-laser-cutting {
-    background-color: #FFE66D;
+.tag-glass {
+    background-color: #C8E6E9;
+}
+
+/* Leadership & Pedagogy */
+.tag-teaching {
+    background-color: #2A9D8F;
+}
+
+.tag-mentoring {
+    background-color: #264653;
+}
+
+.tag-team-leadership {
+    background-color: #F77F00;
+}
+
+/* Project Types/Context */
+.tag-research {
+    background-color: #06FFA5;
     color: #1a1a1a;
 }
 
-.tag-cad {
-    background-color: #FF6B6B;
+.tag-personal-project {
+    background-color: #FF69B4;
 }
 
-.tag-fea {
-    background-color: #4ECDC4;
+.tag-gift {
+    background-color: #DDA15E;
+    color: #1a1a1a;
 }
 
-.tag-mechanism-design {
-    background-color: #FF6B6B;
-}
-
-.tag-welding {
-    background-color: #95B8D1;
-}
-
-.tag-plastic {
-    background-color: #B8E6D5;
-}
-
-.tag-repair {
-    background-color: #FFD93D;
+.tag-course-project {
+    background-color: #A8DADC;
     color: #1a1a1a;
 }
