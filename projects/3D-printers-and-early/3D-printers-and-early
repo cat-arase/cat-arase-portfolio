@@ -113,8 +113,8 @@
 
         <div class="project-header">
             <div>
-                <img src="images/hero.jpg" alt="Egg Gripper" class="project-header-image">
-                <div class="image-caption">The final egg gripper made from delrin</div>
+                <img src="hero.jpg" alt="Croc jibbitz" class="project-header-image">
+                <div class="image-caption">Jibbitz made for crocs</div>
             </div>
 
             <div class="project-info">
@@ -136,22 +136,42 @@
         
         <div class="image-grid">
             <div class="image-grid-item">
-                <img src="images/prototypeV1.jpg" alt="Prototype Version 1">
-                <div class="image-caption">Early version of the flat egg gripper. It was very bad out of plane</div>
+                <video controls>
+                    <source src="reprap.m4v" type="video/m4v">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="image-caption">Reprap printer on its first print!</div>
             </div>
 
             <div class="image-grid-item">
-                <img src="images/prototypeV2.jpg" alt="Prototype Version 2">
-                <div class="image-caption">First version of the 3D gripper. We thought that the cross bars would work like a 4 bar linkage mechanism, but they didn't and made the gripper too stiff. Breaking a few off actually made this gripper work better</div>
+                <img src="reprap-part.jpg" alt="Prototype Version 1">
+                <div class="image-caption">One of my first reprap prints</div>
             </div>
 
             <div class="image-grid-item">
                 <video controls>
-                    <source src="images/video.mp4" type="video/mp4">
+                    <source src="jibbitz.m4v" type="video/m4v">
                     Your browser does not support the video tag.
                 </video>
-                <div class="image-caption">Gripper in action - successfully gripping an egg</div>
+                <div class="image-caption">My printer making croc jibbitz</div>
             </div>
+
+            <div class="image-grid-item">
+                <img src="hero.jpg" alt="First print">
+                <div class="image-caption">Finnished set of croc jibbitz</div>
+            </div>
+
+            <div class="image-grid-item">
+                <img src="luggage-tag.jpg" alt="First print">
+                <div class="image-caption">Luggage tag designed for the printer</div>
+            </div>
+
+            <div class="image-grid-item">
+                <img src="train.jpg" alt="First print">
+                <div class="image-caption">Train designed by me for the printer</div>
+            </div>
+
+
         </div>
         <script>
             fetch('/projects-data.json')
