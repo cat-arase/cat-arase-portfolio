@@ -147,7 +147,7 @@
                 .then(response => response.json())
                 .then(data => {
                     const projects = data.projects || data;
-                    const currentProject = projects.find(p => p.id === 'egg-gripper');
+                    const currentProject = projects.find(p => p.id === 'flashlight');
                     
                     if (currentProject && currentProject.tags) {
                         const tagsDiv = document.getElementById('project-tags');
