@@ -429,13 +429,56 @@ footer p {
     color: #ffffff;
 }
 
+/* FILTER SECTION ROW */
+.filter-section-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    background-color: #f5f5f5;
+    border: 2px solid #e0e0e0;
+    color: #1a1a1a;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s;
+    border-radius: 0px;
+    font-size: 0.95rem;
+}
+
+.filter-btn:hover {
+    border-color: #000000;
+    background-color: #ffffff;
+}
+
+.filter-btn.active {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
+}
+
 /* SKILL FILTER DROPDOWN */
 .filter-section {
     margin-bottom: 2rem;
 }
 
 .skill-filter-container {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
 }
 
 .dropdown-wrapper {
@@ -471,7 +514,7 @@ footer p {
     max-height: 300px;
     overflow-y: auto;
     top: 100%;
-    left: 0;
+    right: 0;
     margin-top: 0.25rem;
 }
 
@@ -486,12 +529,19 @@ footer p {
     background-color: #f5f5f5;
 }
 
+.dropdown-option.disabled {
+    cursor: default;
+    color: #999999;
+}
+
 /* SELECTED SKILLS DISPLAY */
 .selected-skills {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: flex-end;
 }
 
 .selected-skill-tag {
