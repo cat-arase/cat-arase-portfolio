@@ -81,7 +81,7 @@
         }
     </style>
 </head>
-<body data-project="3D-printer-and-early">
+<body data-project="3D-printers-and-early">
     <!-- LOAD HEADER -->
     <div id="header"></div>
 
@@ -170,7 +170,7 @@
                 .then(response => response.json())
                 .then(data => {
                     const projects = data.projects || data;
-                    const currentProject = projects.find(p => p.id === '3D-printer-and-early');
+                    const currentProject = projects.find(p => p.id === '3D-printers-and-early');
                     
                     if (currentProject && currentProject.tags) {
                         const tagsDiv = document.getElementById('project-tags');
