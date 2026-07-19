@@ -114,7 +114,7 @@
       "category": ["engineering"],
       "year": 2022,
       "thumbnail": "projects/flexure-dial-indicator/images/thumbnail.jpg",
-      "tags": ["CAD", "Preision", "Flexure", "3D Printing"=],
+      "tags": ["CAD", "Preision", "Flexure", "3D Printing"],
       "briefDescription": "Dial indicator using flexures instead of gears"
     },
     {
@@ -130,7 +130,7 @@
       "id": "doormat",
       "title": "Custom Doormats",
       "category": ["fun"],
-      "year": 2022-2023
+      "year": 2022-2023,
       "thumbnail": "projects/doormat/images/thumbnail.jpg",
       "tags": ["Laser", "Fire"],
       "briefDescription": "Class to learn lots of tools & processes"
@@ -139,7 +139,7 @@
       "id": "pressure-control",
       "title": "Soft Robot Pressure Control Box ",
       "category": ["research"],
-      "year": 2022
+      "year": 2022,
       "thumbnail": "projects/pressure-control/images/thumbnail.jpg",
       "tags": ["Pneumatics", "Laser"],
       "briefDescription": "Pressure control and vents in a nice box"
