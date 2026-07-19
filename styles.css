@@ -429,6 +429,41 @@ footer p {
     color: #ffffff;
 }
 
+/* TAG FILTER BUTTONS */
+.filter-section {
+    margin-bottom: 2rem;
+}
+
+.tag-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.tag-filter-btn {
+    padding: 6px 14px;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    color: #1a1a1a;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.3s;
+    border-radius: 0px;
+    font-size: 0.85rem;
+}
+
+.tag-filter-btn:hover {
+    border-color: #000000;
+    background-color: #ffffff;
+}
+
+.tag-filter-btn.active {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-color: #1a1a1a;
+}
+
 /* Fabrication & Manufacturing Skills */
 .tag-laser-cutting {
     background-color: #FFD700;
